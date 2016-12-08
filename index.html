@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Mailbox in AngularJS</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body ng-app="myApp">
+
+<ui-view></ui-view>
+<!-- Libraries -->
+<script src="lib/angular.min.js"></script>
+<script src="lib/angular-ui-router.min.js"></script>
+<script src="lib/angular-mocks.js"></script>
+<script src="https://use.fontawesome.com/fd044d6fe0.js"></script>
+
+<!-- Modules -->
+<script src="src/App/common/App.module.js"></script>
+<script src="src/MailBox/common/MailBox.module.js"></script>
+<script src="src/UserData/common/UserData.module.js"></script>
+<script src="src/Routing/Routing.module.js"></script>
+
+<!-- myApp artifacts -->
+<script src="src/App/components/wrapper/App.module.wrapper.component.js"></script>
+<script src="src/App/components/login/App.module.login.component.js"></script>
+<script src="src/App/components/spinner/App.module.spinner.component.js"></script>
+<script src="src/App/data/App.module.access.service.js"></script>
+<script src="src/App/common/App.module.run.js"></script>
+
+<!-- UserData artifacts -->
+<script src="src/UserData/components/newuserinput/UserData.newUserInput.component.js"></script>
+<script src="src/UserData/components/newuserform/UserData.newUserForm.component.js"></script>
+<script src="src/UserData/components/usercard/UserData.userCard.component.js"></script>
+<script src="src/UserData/components/usercardfull/UserData.userCardFull.component.js"></script>
+<script src="src/UserData/components/userlist/UserData.userList.component.js"></script>
+<script src="src/UserData/components/profile/UserData.Profile.component.js"></script>
+<script src="src/UserData/components/userlistpreview/UserData.userListPreview.component.js"></script>
+<script src="src/UserData/components/editprofile/UserData.editProfile.component.js"></script>
+<script src="src/UserData/data/UserData.UserCard.service.js"></script>
+
+<!-- MailBox artifacts -->
+<script src="src/MailBox/components/mailbox/MailBox.mailBox.component.js"></script>
+<script src="src/MailBox/components/mailbox/mailboxmenu/MailBox.mailBoxMenu.component.js"></script>
+<script src="src/MailBox/components/mailitemfullview/MailBox.mailItemFullView.component.js"></script>
+<script src="src/MailBox/components/maillist/MailBox.mailList.component.js"></script>
+<script src="src/MailBox/components/newmail/MailBox.newMail.component.js"></script>
+<script src="src/MailBox/components/sentitems/MailBox.sentItems.component.js"></script>
+<script src="src/MailBox/components/draftitems/MailBox.draftItems.component.js"></script>
+<script src="src/MailBox/components/editmailitem/MailBox.editMailItem.component.js"></script>
+<script src="src/MailBox/components/spamitems/MailBox.spamItems.component.js"></script>
+<script src="src/MailBox/components/mailfolders/MailBox.mailFolders.component.js"></script>
+<script src="src/MailBox/data/MailBox.mailBox.service.js"></script>
+
+<!--Routing artifacts-->
+<script src="src/Routing/Routing.module.App.config.js"></script>
+<script src="src/Routing/Routing.module.MailBox.config.js"></script>
+<script src="src/Routing/Routing.module.UserData.config.js"></script>
+</body>
+</html>
+
+
+
+
