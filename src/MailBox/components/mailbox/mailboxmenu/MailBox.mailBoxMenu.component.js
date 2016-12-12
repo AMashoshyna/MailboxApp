@@ -10,5 +10,8 @@
 	function MailBoxMenuController(MailBoxService, $state) {
 		this.data = MailBoxService.data;
 		this.$state = $state;
+		this.uploadTestMails = function() {
+			return MailBoxService.uploadTestMails();
+		}
 	}
 })();

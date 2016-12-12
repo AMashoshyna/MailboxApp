@@ -3,9 +3,9 @@
     angular.module('MailBox')
         .service('MailBoxService', MailBoxService);
 
-    MailBoxService.$inject = ['$http', 'apiPath'];
+    MailBoxService.$inject = ['$http', 'apiPath', 'testMails'];
 
-    function MailBoxService($http, apiPath) {
+    function MailBoxService($http, apiPath, testMails) {
         var service = this;
 
         service.data = {};
@@ -25,6 +25,7 @@
         service.saveToDrafts = saveToDrafts;
         service.showDraftMessage = {};
         service.showSentMessage = {};
+        service.uploadTestMails = uploadTestMails;
 
         /* -----MAILBOXES MANAGEMENT------*/
         this.mailBoxCreation = function() {
@@ -146,6 +147,16 @@
             this.deleteMessageMsg.deleting = false;
         });
         };
+
+        function uploadTestMails() {
+            return testMails.forEach(function(mail) {
+                 $http.post(apiPath + '/letters', mail)
+                 .then(() => {
+                    service.data.inbox.push(mail);
+                 })
+            })
+           
+        }
 
         function editMail(mail) {
             return $http.patch(apiPath + '/letters/' + mail._id, mail)
