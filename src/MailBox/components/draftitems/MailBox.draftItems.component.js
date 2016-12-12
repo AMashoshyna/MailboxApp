@@ -29,10 +29,12 @@
 		}
 
 		function removeMail(mail) {
+			confirm("Are you sure you want to delete this mail?");
 			MailBoxService.removeMail(mail._id)
 		};
 
 		function removeMultiple() {
+			confirm("Are you sure you want to delete selected items?");
 			this.getSelectedDraftsItems().forEach(function(mail){
 				MailBoxService.removeMail(mail._id)
 			})

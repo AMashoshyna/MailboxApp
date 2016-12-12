@@ -38,6 +38,7 @@
 		};
 
 		function removeMail(mail) {
+			confirm("Are you sure you want to delete this mail?");
 			MailBoxService.removeMail(mail._id)
 		};
 
