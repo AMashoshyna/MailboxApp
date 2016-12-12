@@ -38,43 +38,13 @@
         });
         };
 
-        this.makeNewMailBox = function(mailboxname) {
-            return $http.post(apiPath + '/mailboxes', {
-                    "title": mailboxname
-                })
-                    .then((response) => {
-                    return response.data;
-        });
-        };
-
         this.getFolders = function() {
             return $http.get(apiPath + '/mailboxes')
                     .then((response) => {
                     return response.data;
         });
         };
-        this.removeFolder = function(folderId) {
-            return $http.delete(apiPath + '/mailboxes/' + folderId)
-                    .then((response) => response.data);
-        };
 
-        this.checkIfMailBoxExists = function(mailboxname) {
-            return this.getFolders().then((folders) => {
-                    for (var i = 0; i < folders.length; i++) {
-                var mailbox = folders[i];
-                var result;
-                if (mailbox.title !== mailboxname) {
-                    continue;
-                } else {
-                    result = true;
-                    return;
-                }
-                result = false;
-            }
-            this.check = result;
-            return result;
-        });
-        };
 
         this.getMailBox = function() {
             return service.mailbox;
