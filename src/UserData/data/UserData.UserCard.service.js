@@ -21,7 +21,7 @@
 			return $http.post(apiPath + '/users', newUser)
 					.then((response) => {
 					this.allUsersData.users.push(response.data);
-					return response.data;
+			return response.data;
 		})
 		}
 
@@ -45,7 +45,7 @@
 			return $http.get(apiPath + '/users/' + userId)
 				.then((response) => {
 				service.singleUserData.user = response.data;
-				return response.data;
+			return response.data;
 		})
 		}
 
