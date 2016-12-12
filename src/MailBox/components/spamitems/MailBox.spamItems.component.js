@@ -31,7 +31,7 @@
 		};
 
 		function getSelectedSpamItems(){
-			MailBoxService.getSelectedSpamItems()
+			return MailBoxService.getSelectedSpamItems()
 		};
 
 		function removeMultiple() {

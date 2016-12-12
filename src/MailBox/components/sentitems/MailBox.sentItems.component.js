@@ -14,6 +14,7 @@
 		ctrl.checkAll = checkAll;
 		ctrl.getSelectedSentItems = getSelectedSentItems;
 		ctrl.selectAll = false;
+		ctrl.removeMultiple = removeMultiple;
 
 		function checkAll () {
 			this.data.sent.forEach((item)=> {
@@ -22,7 +23,14 @@
 		};
 		
 		function getSelectedSentItems() {
-			MailBoxService.getSelectedSentItems()
-		}
+			return MailBoxService.getSelectedSentItems()
+		};
+
+		function removeMultiple() {
+			confirm("Are you sure you want to delete selected items?");
+			this.getSelectedSentItems().forEach(function(mail){
+				MailBoxService.removeMail(mail._id)
+			})
+		};
 	}
 })();
