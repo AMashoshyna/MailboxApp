@@ -279,3 +279,8 @@ vertical-align: middle;
   margin: 0;
 }
 
+td:first-child, th:first-child {
+	text-align: center;
+
+}
+
