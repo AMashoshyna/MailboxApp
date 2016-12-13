@@ -38,6 +38,7 @@
 			this.getSelectedDraftsItems().forEach(function(mail){
 				MailBoxService.removeMail(mail._id)
 			})
+			ctrl.selectAll = false;
 		};
 
 		$scope.$on('$stateChangeStart', function() {

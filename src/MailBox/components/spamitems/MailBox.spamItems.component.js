@@ -38,7 +38,8 @@
 			confirm("Are you sure you want to delete selected items?");
 			this.getSelectedSpamItems().forEach(function(mail){
 				MailBoxService.removeMail(mail._id)
-			})
+			});
+			ctrl.selectAll = false;
 		};
 
 		$scope.$on('$stateChangeStart', function() {

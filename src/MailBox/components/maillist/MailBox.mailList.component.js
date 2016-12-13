@@ -46,7 +46,8 @@
 			confirm("Are you sure you want to delete selected items?");
 			this.getSelectedInboxItems().forEach(function(mail){
 				MailBoxService.removeMail(mail._id)
-			})
+			});
+			this.selectAll = false;
 		};
 
 		$scope.$on('$stateChangeStart', function() {
